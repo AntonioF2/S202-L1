@@ -1,0 +1,43 @@
+class Professor:
+    def __init__(self, nome):
+        self.nome = nome
+
+class Aluno:
+    def __init__(self, nome):
+        self.nome = nome
+
+class Aula:
+    def __init__(self, professor, assunto, alunos):
+        self.professor = professor
+        self.assunto = assunto
+        self.alunos = alunos
+
+
+professor1 = Professor("Lucas")
+professor2 = Professor("Mariana")
+professor3 = Professor("Carlos")
+
+
+aluno1 = Aluno("Maria")
+aluno2 = Aluno("Pedro")
+aluno3 = Aluno("João")
+aluno4 = Aluno("Ana")
+aluno5 = Aluno("Luiza")
+aluno6 = Aluno("Rafael")
+
+
+aula1 = Aula(professor1, "Programação Orientada a Objetos", [aluno1, aluno2, aluno3, aluno4])
+aula2 = Aula(professor2, "Banco de Dados", [aluno3, aluno4, aluno5])
+aula3 = Aula(professor3, "Inteligência Artificial", [aluno1, aluno2, aluno5, aluno6])
+
+
+colecao_aulas = [aula1, aula2, aula3]
+
+
+for aula in colecao_aulas:
+    print("Professor: {aula.professor.nome}")
+    print("Assunto: {aula.assunto}")
+    print("Alunos:")
+    for aluno in aula.alunos:
+        print("- {aluno.nome}")
+    print()
